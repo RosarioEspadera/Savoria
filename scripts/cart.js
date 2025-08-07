@@ -1,6 +1,7 @@
 let cart = [];
 
 export function addToCart(dish) {
+  console.log("Added to cart:", dish.name);
   if (!isValidDish(dish)) {
     console.error("Invalid dish format:", dish);
     return;
