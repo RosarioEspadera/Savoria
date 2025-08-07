@@ -34,7 +34,7 @@ function filterByTag(tag) {
   .then(data => {
     const dishes = data.categories.flatMap(cat => cat.items);
     const filtered = dishes.filter(d => d.tags.includes(tag));
-    renderDishes(filtered);
+    loadAndRenderDishes(filtered);
   });
 }
 
@@ -44,7 +44,7 @@ function loadDishes() {
   .then(data => {
     const dishes = data.categories.flatMap(cat => cat.items);
     renderTagFilters(dishes);
-    renderDishes(dishes);
+    loadAndRenderDishes(dishes);
   });
 }
 
