@@ -35,8 +35,6 @@ function filterByTag(tag) {
     const filtered = dishes.filter(d => d.tags.includes(tag));
     renderDishes(filtered);
   });
-
-    .catch(err => console.error("Failed to filter dishes:", err));
 }
 
 function loadDishes() {
@@ -47,7 +45,6 @@ function loadDishes() {
     renderTagFilters(dishes);
     renderDishes(dishes);
   });
-    .catch(err => console.error("Failed to load dishes:", err));
 }
 
 loadDishes();
