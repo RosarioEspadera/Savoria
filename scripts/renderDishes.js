@@ -15,12 +15,16 @@ export function renderDishes(dishes) {
       <div class="dish-info">
         <h2>${dish.name}</h2>
         <p class="price">₱${dish.price.toFixed(2)}</p>
-        <button class="order-btn" aria-label="Add ${dish.name} to cart">🍽️ Add to Order</button>
+        <button class="order-btn" data-index="${i}" aria-label="Add ${dish.name} to cart">
+          🍽️ Add to Order
+        </button>
       </div>
     </section>
   `).join("");
 
-  dishList.querySelectorAll(".order-btn").forEach((btn, i) => {
-    btn.addEventListener("click", () => addToCart(dishes[i]));
+  // Attach event listeners AFTER rendering
+  dishList.querySelectorAll(".order-btn").forEach(btn => {
+    const index = parseInt(btn.dataset.index, 10);
+    btn.addEventListener("click", () => addToCart(dishes[index]));
   });
 }
