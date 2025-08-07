@@ -1,52 +1,39 @@
-import { loadAndRenderDishes, renderDishes } from "./renderDishes.js";
+import { renderDishes } from "./renderDishes.js";
 
+let allDishes = [];
 
-
-const tagFilters = document.getElementById("tagFilters");
-let allTags = [];
-
-function createTagButton(tag, isClear = false) {
-  const button = document.createElement("button");
-  button.className = `tag-button${isClear ? " clear" : ""}`;
-  button.textContent = isClear ? "❌ Clear Filter" : tag;
-  button.onclick = () => {
-    if (isClear) {
-      loadDishes(); // reset to full menu
-    } else {
-      filterByTag(tag);
-    }
-  };
-  return button;
+export function setAllDishes(dishes) {
+  allDishes = dishes;
 }
 
-function renderTagFilters(dishes) {
-  if (!tagFilters || !Array.isArray(dishes)) return;
+export function filterDishes(keyword) {
+  const query = keyword.trim().toLowerCase();
 
-  tagFilters.innerHTML = "";
-  allTags = [...new Set(dishes.flatMap(d => d.tags))].sort();
+  if (!query) {
+    renderDishes(allDishes);
+    return;
+  }
 
-  allTags.forEach(tag => tagFilters.appendChild(createTagButton(tag)));
-  tagFilters.appendChild(createTagButton(null, true)); // clear button
-}
+  const filtered = allDishes.filter(dish =>
+    dish.name.toLowerCase().includes(query) ||
+    dish.category.toLowerCase().includes(query) ||
+    (dish.tags || []).some(tag => tag.toLowerCase().includes(query))
+  );
 
-function filterByTag(tag) {
-  fetch("./data/dishes.json")
-  .then(res => res.json())
-  .then(data => {
-    const dishes = data.categories.flatMap(cat => cat.items);
-    const filtered = dishes.filter(d => d.tags.includes(tag));
+  if (filtered.length === 0) {
+    renderEmptyState(query);
+  } else {
     renderDishes(filtered);
-  });
+  }
 }
 
-function loadDishes() {
- fetch("./data/dishes.json")
-  .then(res => res.json())
-  .then(data => {
-    const dishes = data.categories.flatMap(cat => cat.items);
-    renderTagFilters(dishes);
-    renderDishes(dishes);
-  });
+function renderEmptyState(query) {
+  const container = document.getElementById("menu-container");
+  if (!container) return;
+  container.innerHTML = `
+    <div class="empty-state">
+      <h2>No dishes found for “${query}”</h2>
+      <p>Try another keyword or explore the full menu.</p>
+    </div>
+  `;
 }
-
-loadDishes();
