@@ -1,5 +1,6 @@
 import { loadAndRenderDishes } from "./renderDishes.js";
 
+
 document.addEventListener('DOMContentLoaded', () => {
   loadAndRenderDishes(); // fetches and renders dishes
 
