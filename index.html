@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f4f4f9;
-        }
-        header {
-            background-color: #6200ea;
-            color: white;
-            padding: 1rem 0;
-        }
-        main {
-            padding: 2rem;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
+<!-- Add this to your <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Eloria – Order</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/cards.css" />
+  <link rel="stylesheet" href="styles/cart.css" />
+  <link rel="stylesheet" href="styles/mobile.css" />
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <main>
-        <p>Hello! This is a simple webpage created using HTML.</p>
-        <p>Feel free to explore and customize it!</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 My Website. All rights reserved.</p>
-    </footer>
+  <div class="background-layer"></div>
+  <div class="content">
+  <header class="hero-header">
+  <div class="site-header">
+  <nav class="top-nav">
+    <a href="home.html">Home</a>
+    <a href="index.html">Menu</a>
+    <a href="social.html">Social</a>
+    <a href="profile.html">Profile</a>
+    <a href="chat.html">Chat</a>
+  </nav>
+  </header>
+  <div class="layout">
+  <main id="mainContent">
+  <section id="tagFilters"></section>
+  <section id="dishList"></section>
+  </main>
+    <button class="view-cart-btn">🛒 View Cart</button>
+  <aside class="sidebar">
+  <div id="cartPreview" class="cart-preview"></div>
+  <form id="orderForm">
+    <input type="text" name="name" placeholder="Your name" required />
+    <input type="email" name="email" placeholder="Your email" required />
+    <textarea name="address" placeholder="Delivery address" required></textarea>
+    <button type="submit">Send Order</button>
+  </form>
+  </aside>
+  </div>
+  <script type="module" src="scripts/supabase.js"></script>
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/cart.js"></script>
+  <script type="module" src="scripts/email.js"></script>
+  <script type="module" src="scripts/filter.js"></script>
+  <script type="module" src="scripts/renderDishes.js"></script>
+<div id="toast" class="toast"></div>
+     </div>
 </body>
 </html>

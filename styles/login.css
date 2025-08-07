@@ -1,0 +1,71 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #d49b74, #89c58c);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+form {
+  background: linear-gradient(to bottom right, #c3bb94, #ffffff00);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  max-width: 320px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #d49b74;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7a5a45;
+}
+
+.error {
+  color: red;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.modal-logo {
+  width: 180px;
+  height: 180px;
+  margin-top: -100px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+form h1, p {
+  color: #433728;
+}
+form a {
+  text-decoration: none;
+  color:#681900;
+  font-weight:bolder;
+}

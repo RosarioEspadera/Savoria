@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
+<!-- Add this to your <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eloria | Taste, Together</title>
+  <link rel="stylesheet" href="styles/home.css" />
+  <script src="home.js"></script>
+</head>
+<body class="theme-light">
+ <header class="site-header">
+  <h1 class="logo">Eloria</h1>
+  <nav class="top-nav">
+    <a href="index.html">Menu</a>
+    <a href="social.html">Social</a>
+    <a href="profile.html">Profile</a>
+    <a href="chat.html">Chat</a>
+  </nav>
+</header>
+
+  <section class="hero">
+    <h2>Welcome to Eloria</h2>
+    <p class="tagline">A poetic space for shared meals, modular menus, and expressive community.</p>
+    <a href="index.html" class="cta-button">Explore the Menu</a>
+  </section>
+
+  <section class="featured-dishes">
+    <h3>Featured Dishes</h3>
+    <div class="dish-grid">
+      <!-- Dynamically loaded dishes -->
+    </div>
+  </section>
+  <footer class="site-footer">
+    <p>&copy; 2025 Eloria made by Rio</p>
+  </footer>
+
+<script>
+  // Static featured dishes
+  const dishes = [
+    {
+      name: "Midnight Adobo",
+      description: "Slow-braised pork in soy and vinegar, with a whisper of bay leaf.",
+      photo: "assets/images/Adobo.png"
+    },
+    {
+      name: "Sunlit Salad",
+      description: "Crisp greens with citrus zest and sesame warmth.",
+      photo: "assets/images/Salad.png"
+    },
+    {
+      name: "Barbecue Reverie",
+      description: "Smoky, tender cuts glazed in sweet fire.",
+      photo: "assets/images/Barbecue.png"
+    }
+  ];
+
+  // Render dishes
+  const grid = document.querySelector('.dish-grid');
+  dishes.forEach(dish => {
+    const card = document.createElement('div');
+    card.className = 'dish-card';
+    card.innerHTML = `
+      <img src="${dish.photo}" alt="${dish.name}" />
+      <h4>${dish.name}</h4>
+      <p>${dish.description}</p>
+    `;
+    grid.appendChild(card);
+  });
+</script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".dish-card");
+    cards.forEach((card, i) => {
+      card.style.animationDelay = `${i * 0.2}s`;
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+.site-header {
+  display: flex;
+  justify-content: center;
+  background: rgb(110 74 74 / 40%);
+  padding: 1rem;
+  z-index: 2;
+}
+
+.top-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.top-nav a {
+  color: #53321e;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.top-nav a:hover {
+  background: rgba(239, 221, 207, 0.4);
+}

@@ -1,0 +1,169 @@
+body {
+  width:100%;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffff;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, #e0b835, #ffffff);
+  border-bottom: 1px solid #e0d6cf;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #5c3d2e;
+  margin: 0;
+}
+
+.profile-section {
+  width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  background-image: url('https://raw.githubusercontent.com/RosarioEspadera/Eloria/main/profilesecbg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.photo-container {
+  margin-bottom: 1.5rem;
+}
+
+#profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#photo-upload {
+  margin-top: 1rem;
+}
+
+#change-photo {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #a86c4b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#user-info p {
+  font-size: 1rem;
+  color: #f1efe0;
+  margin: 0.5rem 0;
+}
+
+#logout-button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #c45f4a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#logout-button:hover {
+  background-color: #a84c3a;
+}
+
+.bottom-tab {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+.tab-link {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #5f4638;
+  text-decoration: none;
+}
+.toast {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  z-index: 9999;
+  opacity: 0.95;
+}
+.toast.success { background: #2ecc71; }
+.toast.error { background: #e74c3c; }
+.toast.warning { background: #f39c12; }
+.toast.info { background: #3498db; }
+
+.profile-fields {
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  max-width: 400px;
+}
+
+.profile-fields label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-fields input {
+  width: 90%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.profile-fields input:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #0077cc;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+

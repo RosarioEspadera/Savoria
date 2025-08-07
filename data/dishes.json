@@ -1,0 +1,66 @@
+{
+  "categories": [
+    {
+      "id": "drinks",
+      "name": "☕ Drinks",
+      "background": "gradient-coffee-sunset",
+      "items": [
+        { "id": "americano", "name": "Americano", "price": 100, "image": "./assets/images/Americano.png", "tags": ["coffee", "hot", "bold"] },
+        { "id": "espresso", "name": "Espresso", "price": 90, "image": "./assets/images/Espresso.png", "tags": ["coffee", "hot", "strong"] },
+        { "id": "latte", "name": "Latte", "price": 120, "image": "./assets/images/Latte.png", "tags": ["coffee", "milky", "comfort"] },
+        { "id": "cappuccino", "name": "Cappuccino", "price": 120, "image": "./assets/images/Cappuccino.png", "tags": ["coffee", "foam", "classic"] },
+        { "id": "macchiato", "name": "Macchiato", "price": 110, "image": "./assets/images/Macchiato.png", "tags": ["coffee", "bold", "creamy"] },
+        { "id": "mocha", "name": "Mocha", "price": 130, "image": "./assets/images/Mocha.png", "tags": ["coffee", "chocolate", "sweet"] },
+        { "id": "cold_brew", "name": "Cold Brew", "price": 130, "image": "./assets/images/ColdBrew.png", "tags": ["coffee", "cold", "refreshing"] },
+        { "id": "iced_coffee", "name": "Iced Coffee", "price": 120, "image": "./assets/images/IcedCoffee.png", "tags": ["coffee", "cold", "classic"] }
+      ]
+    },
+    {
+      "id": "breakfast_brunch",
+      "name": "🍳 Breakfast & Brunch",
+      "background": "gradient-morning-toast",
+      "items": [
+        { "id": "avocado_toast", "name": "Avocado Toast", "price": 180, "image": "./assets/images/AvocadoToast.png", "tags": ["vegetarian", "brunch", "trendy"] },
+        { "id": "breakfast_burrito", "name": "Breakfast Burrito", "price": 190, "image": "./assets/images/BreakfastBurrito.png", "tags": ["eggs", "hearty", "mexican"] },
+        { "id": "french_toast", "name": "French Toast", "price": 170, "image": "./assets/images/FrenchToast.png", "tags": ["sweet", "brunch", "classic"] },
+        { "id": "eggs_benedict", "name": "Eggs Benedict", "price": 200, "image": "./assets/images/EggsBenedict.png", "tags": ["filipino", "brunch", "savory"] },
+        { "id": "waffles", "name": "Waffles", "price": 160, "image": "./assets/images/Waffles.png", "tags": ["sweet", "brunch", "comfort"] }
+      ]
+    },
+    {
+      "id": "sandwiches_wraps",
+      "name": "🥪 Sandwiches & Wraps",
+      "background": "gradient-panini-press",
+      "items": [
+        { "id": "grilled_cheese", "name": "Grilled Cheese", "price": 160, "image": "./assets/images/GrilledCheese.png", "tags": ["cheesy", "comfort", "classic"] },
+        { "id": "chicken_pesto", "name": "Chicken Pesto Panini", "price": 220, "image": "./assets/images/ChickenPestoPanini.png", "tags": ["grilled", "hearty", "lunch"] },
+        { "id": "tuna_melt", "name": "Tuna Melt", "price": 180, "image": "./assets/images/TunaMelt.png", "tags": ["savory", "lunch", "classic"] },
+        { "id": "veggie_wrap", "name": "Veggie Wrap", "price": 170, "image": "./assets/images/VeggieWrap.png", "tags": ["vegan", "light", "fresh"] },
+        { "id": "croissant_sandwich", "name": "Croissant Sandwich", "price": 190, "image": "./assets/images/CroissantSandwich.png", "tags": ["ham", "cheese", "flaky"] }
+      ]
+    },
+    {
+      "id": "salads_light_meals",
+      "name": "🥗 Salads & Light Meals",
+      "background": "gradient-garden-breeze",
+      "items": [
+        { "id": "caesar_salad", "name": "Caesar Salad", "price": 170, "image": "./assets/images/CaesarSalad.png", "tags": ["chicken", "crisp", "classic"] },
+        { "id": "quinoa_bowl", "name": "Quinoa Bowl", "price": 190, "image": "./assets/images/QuinoaBowl.png", "tags": ["vegan", "grain", "nutritious"] },
+        { "id": "greek_salad", "name": "Greek Salad", "price": 160, "image": "./assets/images/GreekSalad.png", "tags": ["feta", "olives", "fresh"] },
+        { "id": "kani_salad", "name": "Kani Salad", "price": 160, "image": "./assets/images/KaniSalad.png", "tags": ["japanese", "sweet-savory", "light"] }
+      ]
+    },
+    {
+      "id": "pastries_desserts",
+      "name": "🍰 Pastries & Desserts",
+      "background": "gradient-sugar-dream",
+      "items": [
+        { "id": "coffee_cake", "name": "Coffee Cake", "price": 140, "image": "./assets/images/CoffeeCake.png", "tags": ["sweet", "crumbly", "classic"] },
+        { "id": "beignets", "name": "Beignets", "price": 140, "image": "./assets/images/Beignets.png", "tags": ["french", "sweet", "powdered"] },
+        { "id": "muffins", "name": "Banana Muffins", "price": 130, "image": "./assets/images/Muffins.png", "tags": ["sweet", "soft", "classic"] },
+        { "id": "cheesecake", "name": "Ube Cheesecake", "price": 150, "image": "./assets/images/Cheesecake.png", "tags": ["filipino", "dessert", "creamy"] },
+        { "id": "donuts", "name": "Donuts", "price": 130, "image": "./assets/images/Donuts.png", "tags": ["sweet", "fried", "classic"] }
+      ]
+    }
+  ]
+}

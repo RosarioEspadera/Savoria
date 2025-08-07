@@ -1,0 +1,77 @@
+#dishList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.dish-card {
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(45deg, #c3bb94, #ffffff00);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: #c0aa9a;
+}
+
+.dish-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.dish-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #ffff
+}
+
+.dish-card h2 {
+  font-size: 1rem;
+}
+
+.order-btn {
+  align-self: start;
+  background-color: #d0985d;
+  color: #1a1a1a;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.6rem;
+}
+
+.order-btn:hover {
+  background-color: #e3c7b8;
+}
+
+#tagFilters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.tag-button {
+  background: #e0d6cf;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  gap: 1.5rem;
+  margin: 10px; 
+  align-content: center;
+}
+
+.tag-button:hover {
+  background: #5f4638;
+  color: white;
+}
