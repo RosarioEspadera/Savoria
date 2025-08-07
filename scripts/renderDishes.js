@@ -2,18 +2,20 @@ import { addToCart } from "./cart.js";
 
 
 function groupDishesByCategory(dishes) {
-  const categories = {};
+  const map = new Map();
   dishes.forEach(dish => {
-    if (!categories[dish.category]) {
-      categories[dish.category] = {
+    if (!map.has(dish.category)) {
+      map.set(dish.category, {
+        name: dish.category,
         background: dish.background || '',
         items: []
-      };
+      });
     }
-    categories[dish.category].items.push(dish);
+    map.get(dish.category).items.push(dish);
   });
-  return categories;
+  return Array.from(map.values());
 }
+
 
 
 export async function loadAndRenderDishes() {
@@ -80,12 +82,12 @@ export function renderDishes(dishes) {
 
   const categories = groupDishesByCategory(dishes);
 
-  Object.entries(categories).forEach(([categoryName, category], catIndex) => {
+  categories.forEach((category, catIndex) => {
     const section = document.createElement('section');
     section.className = `category-section ${category.background}`;
 
     const title = document.createElement('h2');
-    title.textContent = categoryName;
+    title.textContent = category.name;
     section.appendChild(title);
 
     category.items.forEach((dish, dishIndex) => {
@@ -110,9 +112,10 @@ export function renderDishes(dishes) {
   buttons.forEach(btn => {
     const cat = parseInt(btn.dataset.cat, 10);
     const index = parseInt(btn.dataset.index, 10);
-    const dish = categories[Object.keys(categories)[cat]]?.items[index];
+    const dish = categories[cat]?.items[index];
     if (dish) {
       btn.addEventListener("click", () => addToCart(dish));
     }
   });
 }
+
