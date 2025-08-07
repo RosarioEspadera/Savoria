@@ -1,12 +1,15 @@
 #menu-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 2rem;
   padding: 2rem 1rem;
 }
 
 .category-section {
-  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
   border-radius: 1rem;
   margin-bottom: 2rem;
   color: #dbc1c1;
@@ -46,8 +49,8 @@
 }
 
 .dish-card img {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -127,7 +130,7 @@
 
 /* Panini */
 .category-sandwiches {
-  background: linear-gradient(to right, #d4a373, #6c584c); /* gradient-panini-press */
+  background: linear-gradient(to right, #d4a373, #cdb5a7); /* gradient-panini-press */
   box-shadow: 0 0 10px rgba(212, 163, 115, 0.3);
 }
 
@@ -145,4 +148,10 @@
 .category-unknown {
   background: rgba(200, 200, 200, 0.2);
   border-left: 4px solid #ccc;
+}
+.dish-card.category-breakfast p, .dish-card.category-breakfast h3{
+    color:#173856;
+}
+.dish-card.category-pastries p, .dish-card.category-pastries h3 {
+  color:#655d17
 }
