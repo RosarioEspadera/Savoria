@@ -1,4 +1,5 @@
-import { renderDishes } from "./renderDishes.js";
+import { loadAndRenderDishes } from "./renderDishes.js";
+
 
 const tagFilters = document.getElementById("tagFilters");
 let allTags = [];
