@@ -1,13 +1,39 @@
 import { loadAndRenderDishes, renderDishes } from "./renderDishes.js";
 import { setAllDishes, filterDishes } from "./filter.js";
 
-async function init() {
+function extractUniqueTags(dishes) {
+  const tagSet = new Set();
+  dishes.forEach(dish => {
+    (dish.tags || []).forEach(tag => tagSet.add(tag));
+  });
+  return Array.from(tagSet);
+}
+
+function renderTagFilters(tags) {
+  const container = document.getElementById("tagFilters");
+  if (!container) return;
+
+  container.innerHTML = '';
+  tags.forEach(tag => {
+    const btn = document.createElement("button");
+    btn.className = "tag-button";
+    btn.textContent = tag;
+    btn.addEventListener("click", () => filterDishes(tag));
+    container.appendChild(btn);
+  });
+}
+
+export async function initMenu() {
   try {
     const res = await fetch('./data/dishes.json');
     const data = await res.json();
     const all = data.categories.flatMap(cat => cat.items);
+
     setAllDishes(all);
     renderDishes(all);
+
+    const tags = extractUniqueTags(all);
+    renderTagFilters(tags);
 
     const searchInput = document.getElementById("search");
     if (searchInput) {
@@ -20,7 +46,7 @@ async function init() {
   }
 }
 
-init();
+initMenu();
 
 document.addEventListener('DOMContentLoaded', () => {
   const viewCartButton = document.querySelector('.view-cart-btn');
