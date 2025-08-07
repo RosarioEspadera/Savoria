@@ -5,16 +5,40 @@
   padding: 2rem 1rem;
 }
 
+.category-section {
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
 .dish-card {
-  height: auto;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  background: linear-gradient(45deg, #c3bb94, #ffffff00);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
   padding: 1rem;
-  margin-bottom: 1.5rem;
-  color: #c0aa9a;
+  margin: 1rem 0;
+  backdrop-filter: blur(6px);
+}
+
+/* Gradients from your JSON */
+.gradient-coffee-sunset {
+  background: linear-gradient(to right, #3c2a21, #b08968);
+}
+
+.gradient-morning-toast {
+  background: linear-gradient(to right, #fcd5ce, #faedcd);
+}
+
+.gradient-panini-press {
+  background: linear-gradient(to right, #d4a373, #6c584c);
+}
+
+.gradient-garden-breeze {
+  background: linear-gradient(to right, #a3b18a, #dad7cd);
+}
+
+.gradient-sugar-dream {
+  background: linear-gradient(to right, #f8edeb, #fcd5ce);
 }
 
 .dish-card img {
