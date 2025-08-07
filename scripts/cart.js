@@ -41,7 +41,7 @@ export async function loadDishes() {
     const res = await fetch('./data/dishes.json');
     const data = await res.json();
     dishes = data.categories.flatMap(cat => cat.items);
-    renderCart();
+    renderCart(); // now dishes is ready
   } catch (err) {
     console.error("Failed to load dishes:", err);
   }
@@ -99,3 +99,4 @@ window.removeFromCart = function(index) {
 export function getCart() {
   return cart;
 }
+loadDishes();
