@@ -92,7 +92,7 @@ export function renderDishes(dishes) {
 
     category.items.forEach((dish, dishIndex) => {
       const card = document.createElement('div');
-      card.className = `dish-card dish-${category.name.toLowerCase()}`;
+      card.className = `dish-card dish-${dish.category.toLowerCase()}`;
       card.innerHTML = `
         <img src="${dish.image}" alt="${dish.name}" loading="lazy" />
         <div class="dish-info">
