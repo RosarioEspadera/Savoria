@@ -1,6 +1,6 @@
 import { addToCart } from "./cart.js";
 
-async function loadAndRenderDishes() {
+export async function loadAndRenderDishes() {
   try {
     const res = await fetch('./data/dishes.json');
     const data = await res.json();
