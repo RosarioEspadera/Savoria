@@ -19,8 +19,9 @@ function groupDishesByCategory(dishes) {
 // Create a single dish card
 function createDishCard(dish, catIndex, dishIndex) {
   const card = document.createElement('div');
-  const categoryClass = dish.category ? `dish-${dish.category.toLowerCase()}` : '';
-  card.className = `dish-card ${categoryClass}`;
+  const categoryClass = `category-${dish.category.toLowerCase().replace(/\s+/g, '-')}`;
+  card.classList.add("dish-card", categoryClass);
+
   card.innerHTML = `
     <img src="${dish.image}" alt="${dish.name}" loading="lazy" />
     <div class="dish-info">
@@ -33,6 +34,7 @@ function createDishCard(dish, catIndex, dishIndex) {
   `;
   return card;
 }
+
 
 // Attach cart listeners
 function attachCartListeners(container, categories) {
