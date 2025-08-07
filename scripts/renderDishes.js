@@ -56,3 +56,37 @@ export async function loadAndRenderDishes() {
 }
 
 loadAndRenderDishes();
+
+export function renderDishes(dishes) {
+  const container = document.getElementById('menu-container');
+  if (!container) return;
+
+  container.innerHTML = ""; // Clear previous content
+
+  dishes.forEach((dish, index) => {
+    const card = document.createElement('div');
+    card.className = 'dish-card';
+
+    card.innerHTML = `
+      <img src="${dish.image}" alt="${dish.name}" loading="lazy" />
+      <div class="dish-info">
+        <h3>${dish.name}</h3>
+        <p class="price">₱${dish.price.toFixed(2)}</p>
+        <button class="order-btn" data-index="${index}">
+          🍽️ Add to Order
+        </button>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+
+  // Attach cart listeners
+  const buttons = container.querySelectorAll(".order-btn");
+  buttons.forEach((btn, i) => {
+    const dish = dishes[i];
+    if (dish) {
+      btn.addEventListener("click", () => addToCart(dish));
+    }
+  });
+}
