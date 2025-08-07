@@ -5,14 +5,14 @@
       "name": "☕ Drinks",
       "background": "gradient-coffee-sunset",
       "items": [
-        { "id": "americano", "name": "Americano", "price": 100, "image": "./assets/images/Americano.png", "tags": ["coffee"] },
-        { "id": "espresso", "name": "Espresso", "price": 90, "image": "./assets/images/Espresso.png", "tags": ["coffee"] },
-        { "id": "latte", "name": "Latte", "price": 120, "image": "./assets/images/Latte.png", "tags": ["coffee"] },
-        { "id": "cappuccino", "name": "Cappuccino", "price": 120, "image": "./assets/images/Cappuccino.png", "tags": ["coffee"] },
-        { "id": "macchiato", "name": "Macchiato", "price": 110, "image": "./assets/images/Macchiato.png", "tags": ["coffee"] },
-        { "id": "mocha", "name": "Mocha", "price": 130, "image": "./assets/images/Mocha.png", "tags": ["coffee", "sweet"] },
-        { "id": "cold_brew", "name": "Cold Brew", "price": 130, "image": "./assets/images/ColdBrew.png", "tags": ["coffee"] },
-        { "id": "iced_coffee", "name": "Iced Coffee", "price": 120, "image": "./assets/images/IcedCoffee.png", "tags": ["coffee"] }
+        { "id": "americano", "name": "Americano", "category": "Coffee", "price": 100, "image": "./assets/images/Americano.png", "tags": ["coffee"] },
+        { "id": "espresso", "name": "Espresso", "category": "Coffee", "price": 90, "image": "./assets/images/Espresso.png", "tags": ["coffee"] },
+        { "id": "latte", "name": "Latte", "category": "Coffee", "price": 120, "image": "./assets/images/Latte.png", "tags": ["coffee"] },
+        { "id": "cappuccino", "name": "Cappuccino", "category": "Coffee", "price": 120, "image": "./assets/images/Cappuccino.png", "tags": ["coffee"] },
+        { "id": "macchiato", "name": "Macchiato", "category": "Coffee", "price": 110, "image": "./assets/images/Macchiato.png", "tags": ["coffee"] },
+        { "id": "mocha", "name": "Mocha", "category": "Coffee", "price": 130, "image": "./assets/images/Mocha.png", "tags": ["coffee", "sweet"] },
+        { "id": "cold_brew", "name": "Cold Brew", "category": "Coffee", "price": 130, "image": "./assets/images/ColdBrew.png", "tags": ["coffee"] },
+        { "id": "iced_coffee", "name": "Iced Coffee", "category": "Coffee", "price": 120, "image": "./assets/images/IcedCoffee.png", "tags": ["coffee"] }
       ]
     },
     {
@@ -20,11 +20,11 @@
       "name": "🍳 Breakfast & Brunch",
       "background": "gradient-morning-toast",
       "items": [
-        { "id": "avocado_toast", "name": "Avocado Toast", "price": 180, "image": "./assets/images/AvocadoToast.png", "tags": ["eggs", "brunch"] },
-        { "id": "breakfast_burrito", "name": "Breakfast Burrito", "price": 190, "image": "./assets/images/BreakfastBurrito.png", "tags": ["eggs", "brunch"] },
-        { "id": "french_toast", "name": "French Toast", "price": 170, "image": "./assets/images/FrenchToast.png", "tags": ["sweet", "brunch"] },
-        { "id": "eggs_benedict", "name": "Eggs Benedict", "price": 200, "image": "./assets/images/EggsBenedict.png", "tags": ["eggs", "brunch"] },
-        { "id": "waffles", "name": "Waffles", "price": 160, "image": "./assets/images/Waffles.png", "tags": ["sweet", "brunch"] }
+        { "id": "avocado_toast", "name": "Avocado Toast", "category": "Breakfast", "price": 180, "image": "./assets/images/AvocadoToast.png", "tags": ["eggs", "brunch"] },
+        { "id": "breakfast_burrito", "name": "Breakfast Burrito", "category": "Breakfast", "price": 190, "image": "./assets/images/BreakfastBurrito.png", "tags": ["eggs", "brunch"] },
+        { "id": "french_toast", "name": "French Toast", "category": "Breakfast", "price": 170, "image": "./assets/images/FrenchToast.png", "tags": ["sweet", "brunch"] },
+        { "id": "eggs_benedict", "name": "Eggs Benedict", "category": "Breakfast", "price": 200, "image": "./assets/images/EggsBenedict.png", "tags": ["eggs", "brunch"] },
+        { "id": "waffles", "name": "Waffles", "category": "Breakfast", "price": 160, "image": "./assets/images/Waffles.png", "tags": ["sweet", "brunch"] }
       ]
     },
     {
@@ -32,11 +32,11 @@
       "name": "🥪 Sandwiches & Wraps",
       "background": "gradient-panini-press",
       "items": [
-        { "id": "grilled_cheese", "name": "Grilled Cheese", "price": 160, "image": "./assets/images/GrilledCheese.png", "tags": ["cheesy"] },
-        { "id": "chicken_pesto", "name": "Chicken Pesto Panini", "price": 220, "image": "./assets/images/ChickenPestoPanini.png", "tags": ["brunch"] },
-        { "id": "tuna_melt", "name": "Tuna Melt", "price": 180, "image": "./assets/images/TunaMelt.png", "tags": ["brunch", "cheesy"] },
-        { "id": "veggie_wrap", "name": "Veggie Wrap", "price": 170, "image": "./assets/images/VeggieWrap.png", "tags": ["vegan"] },
-        { "id": "croissant_sandwich", "name": "Croissant Sandwich", "price": 190, "image": "./assets/images/CroissantSandwich.png", "tags": ["cheesy"] }
+        { "id": "grilled_cheese", "name": "Grilled Cheese", "category": "Sandwiches", "price": 160, "image": "./assets/images/GrilledCheese.png", "tags": ["cheesy"] },
+        { "id": "chicken_pesto", "name": "Chicken Pesto Panini", "category": "Sandwiches", "price": 220, "image": "./assets/images/ChickenPestoPanini.png", "tags": ["brunch"] },
+        { "id": "tuna_melt", "name": "Tuna Melt", "category": "Sandwiches", "price": 180, "image": "./assets/images/TunaMelt.png", "tags": ["brunch", "cheesy"] },
+        { "id": "veggie_wrap", "name": "Veggie Wrap", "category": "Sandwiches", "price": 170, "image": "./assets/images/VeggieWrap.png", "tags": ["vegan"] },
+        { "id": "croissant_sandwich", "name": "Croissant Sandwich", "category": "Sandwiches", "price": 190, "image": "./assets/images/CroissantSandwich.png", "tags": ["cheesy"] }
       ]
     },
     {
@@ -44,10 +44,10 @@
       "name": "🥗 Salads & Light Meals",
       "background": "gradient-garden-breeze",
       "items": [
-        { "id": "caesar_salad", "name": "Caesar Salad", "price": 170, "image": "./assets/images/CaesarSalad.png", "tags": ["brunch"] },
-        { "id": "quinoa_bowl", "name": "Quinoa Bowl", "price": 190, "image": "./assets/images/QuinoaBowl.png", "tags": ["vegan"] },
-        { "id": "greek_salad", "name": "Greek Salad", "price": 160, "image": "./assets/images/GreekSalad.png", "tags": ["vegan"] },
-        { "id": "kani_salad", "name": "Kani Salad", "price": 160, "image": "./assets/images/KaniSalad.png", "tags": ["vegan"] }
+        { "id": "caesar_salad", "name": "Caesar Salad", "category": "Salads", "price": 170, "image": "./assets/images/CaesarSalad.png", "tags": ["brunch"] },
+        { "id": "quinoa_bowl", "name": "Quinoa Bowl", "category": "Salads", "price": 190, "image": "./assets/images/QuinoaBowl.png", "tags": ["vegan"] },
+        { "id": "greek_salad", "name": "Greek Salad", "category": "Salads", "price": 160, "image": "./assets/images/GreekSalad.png", "tags": ["vegan"] },
+        { "id": "kani_salad", "name": "Kani Salad", "category": "Salads", "price": 160, "image": "./assets/images/KaniSalad.png", "tags": ["vegan"] }
       ]
     },
     {
@@ -55,11 +55,11 @@
       "name": "🍰 Pastries & Desserts",
       "background": "gradient-sugar-dream",
       "items": [
-        { "id": "coffee_cake", "name": "Coffee Cake", "price": 140, "image": "./assets/images/CoffeeCake.png", "tags": ["sweet"] },
-        { "id": "beignets", "name": "Beignets", "price": 140, "image": "./assets/images/Beignets.png", "tags": ["sweet"] },
-        { "id": "muffins", "name": "Banana Muffins", "price": 130, "image": "./assets/images/Muffins.png", "tags": ["sweet"] },
-        { "id": "cheesecake", "name": "Ube Cheesecake", "price": 150, "image": "./assets/images/Cheesecake.png", "tags": ["sweet", "cheesy"] },
-        { "id": "donuts", "name": "Donuts", "price": 130, "image": "./assets/images/Donuts.png", "tags": ["sweet"] }
+        { "id": "coffee_cake", "name": "Coffee Cake", "category": "Pastries", "price": 140, "image": "./assets/images/CoffeeCake.png", "tags": ["sweet"] },
+        { "id": "beignets", "name": "Beignets", "category": "Pastries", "price": 140, "image": "./assets/images/Beignets.png", "tags": ["sweet"] },
+        { "id": "muffins", "name": "Banana Muffins", "category": "Pastries", "price": 130, "image": "./assets/images/Muffins.png", "tags": ["sweet"] },
+        { "id": "cheesecake", "name": "Ube Cheesecake", "category": "Pastries", "price": 150, "image": "./assets/images/Cheesecake.png", "tags": ["sweet", "cheesy"] },
+        { "id": "donuts", "name": "Donuts", "category": "Pastries", "price": 130, "image": "./assets/images/Donuts.png", "tags": ["sweet"] }
       ]
     }
   ]
