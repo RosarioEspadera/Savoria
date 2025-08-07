@@ -1,5 +1,5 @@
 import { loadAndRenderDishes, renderDishes } from "./renderDishes.js";
-import { setAllDishes, filterDishes } from "./filter.js";
+import { setAllDishes, toggleTag, filterDishes } from "./filter.js";
 
 function extractUniqueTags(dishes) {
   const tagSet = new Set();
@@ -18,7 +18,7 @@ function renderTagFilters(tags) {
     const btn = document.createElement("button");
     btn.className = "tag-button";
     btn.textContent = tag;
-    btn.addEventListener("click", () => filterDishes(tag));
+    btn.addEventListener("click", () => toggleTag(tag));
     container.appendChild(btn);
   });
 }
@@ -48,6 +48,7 @@ export async function initMenu() {
 
 initMenu();
 
+// Cart sidebar toggle
 document.addEventListener('DOMContentLoaded', () => {
   const viewCartButton = document.querySelector('.view-cart-btn');
   const sidebar = document.querySelector('.sidebar');
