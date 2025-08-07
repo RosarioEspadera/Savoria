@@ -29,22 +29,22 @@ function renderTagFilters(dishes) {
 
 function filterByTag(tag) {
   fetch("./data/dishes.json")
-    .then(res => res.json())
-    .then(dishes => {
-      const filtered = dishes.filter(d => d.tags.includes(tag));
-      renderDishes(filtered);
-    })
-    .catch(err => console.error("Failed to filter dishes:", err));
+  .then(res => res.json())
+  .then(data => {
+    const dishes = data.categories.flatMap(cat => cat.items);
+    const filtered = dishes.filter(d => d.tags.includes(tag));
+    renderDishes(filtered);
+  });
 }
 
 function loadDishes() {
-  fetch("./data/dishes.json")
-    .then(res => res.json())
-    .then(dishes => {
-      renderTagFilters(dishes);
-      renderDishes(dishes);
-    })
-    .catch(err => console.error("Failed to load dishes:", err));
+ fetch("./data/dishes.json")
+  .then(res => res.json())
+  .then(data => {
+    const dishes = data.categories.flatMap(cat => cat.items);
+    renderTagFilters(dishes);
+    renderDishes(dishes);
+  });
 }
 
 loadDishes();

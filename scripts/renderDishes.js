@@ -6,21 +6,24 @@ export function renderDishes(dishes) {
 
   dishList.innerHTML = dishes.map((dish, i) => `
     <section class="dish-card" data-index="${i}">
-      <img 
-        src="${dish.image}" 
-        alt="${dish.name}" 
-        onerror="this.src='fallback.jpg'" 
-        loading="lazy"
-      />
+      <img src="${dish.image}" alt="${dish.name}" loading="lazy" />
       <div class="dish-info">
         <h2>${dish.name}</h2>
-        <p class="description">${dish.description}</p>
-        <button class="order-btn" aria-label="Add ${dish.name} to cart">🍽️ Add to Order</button>
+        <p class="price">₱${dish.price.toFixed(2)}</p>
+        <button class="order-btn" data-index="${i}">
+          🍽️ Add to Order
+        </button>
       </div>
     </section>
   `).join("");
 
-  dishList.querySelectorAll(".order-btn").forEach((btn, i) => {
-    btn.addEventListener("click", () => addToCart(dishes[i]));
+  // Attach listeners AFTER rendering
+  const buttons = dishList.querySelectorAll(".order-btn");
+  buttons.forEach(btn => {
+    const index = parseInt(btn.dataset.index, 10);
+    btn.addEventListener("click", () => {
+      const dish = dishes[index];
+      if (dish) addToCart(dish);
+    });
   });
 }
