@@ -1,4 +1,4 @@
-import { loadAndRenderDishes } from "./renderDishes.js";
+import { loadAndRenderDishes, renderDishes } from "./renderDishes.js";
 import { setAllDishes, filterDishes } from "./filter.js";
 
 async function init() {
@@ -21,3 +21,16 @@ async function init() {
 }
 
 init();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const viewCartButton = document.querySelector('.view-cart-btn');
+  const sidebar = document.querySelector('.sidebar');
+  const mainContent = document.getElementById('mainContent');
+
+  if (viewCartButton && sidebar && mainContent) {
+    viewCartButton.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      mainContent.classList.toggle('shifted');
+    });
+  }
+});
