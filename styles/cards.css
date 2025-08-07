@@ -108,3 +108,41 @@
   background: #5f4638;
   color: white;
 }
+.tag-button.active { 
+  background:#795548; 
+  color: white; 
+}
+
+/* Coffee */
+.category-coffee {
+  background: linear-gradient(to right, #3c2a21, #b08968); /* gradient-coffee-sunset */
+  box-shadow: 0 0 10px rgba(60, 42, 33, 0.3);
+}
+
+/* Brunch */
+.category-breakfast {
+  background: linear-gradient(to right, #fcd5ce, #faedcd); /* gradient-morning-toast */
+  box-shadow: 0 0 10px rgba(252, 213, 206, 0.3);
+}
+
+/* Panini */
+.category-sandwiches {
+  background: linear-gradient(to right, #d4a373, #6c584c); /* gradient-panini-press */
+  box-shadow: 0 0 10px rgba(212, 163, 115, 0.3);
+}
+
+/* Garden */
+.category-salads {
+  background: linear-gradient(to right, #a3b18a, #dad7cd); /* gradient-garden-breeze */
+  box-shadow: 0 0 10px rgba(163, 177, 138, 0.3);
+}
+
+/* Sweet */
+.category-pastries {
+  background: linear-gradient(to right, #f8edeb, #fcd5ce); /* gradient-sugar-dream */
+  box-shadow: 0 0 10px rgba(248, 237, 235, 0.3);
+}
+.category-unknown {
+  background: rgba(200, 200, 200, 0.2);
+  border-left: 4px solid #ccc;
+}
