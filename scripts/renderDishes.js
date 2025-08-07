@@ -19,7 +19,9 @@ function groupDishesByCategory(dishes) {
 // Create a single dish card
 function createDishCard(dish, catIndex, dishIndex) {
   const card = document.createElement('div');
-  const categoryClass = `category-${dish.category.toLowerCase().replace(/\s+/g, '-')}`;
+  const categoryClass = dish.category
+  ? `category-${dish.category.toLowerCase().replace(/\s+/g, '-')}`
+  : 'category-unknown';
   card.classList.add("dish-card", categoryClass);
 
   card.innerHTML = `
