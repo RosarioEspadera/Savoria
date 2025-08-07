@@ -14,7 +14,7 @@ export function renderDishes(dishes) {
       />
       <div class="dish-info">
         <h2>${dish.name}</h2>
-        <p class="description">${dish.description}</p>
+        <p class="price">₱${dish.price.toFixed(2)}</p>
         <button class="order-btn" aria-label="Add ${dish.name} to cart">🍽️ Add to Order</button>
       </div>
     </section>
