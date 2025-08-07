@@ -20,7 +20,7 @@
       "name": "🍳 Breakfast & Brunch",
       "background": "gradient-morning-toast",
       "items": [
-        { "id": "avocado_toast", "name": "Avocado Toast", "price": 180, "image": "./assets/images/AvocadoToast.png", "tags": ["vegetarian", "brunch"] },
+        { "id": "avocado_toast", "name": "Avocado Toast", "price": 180, "image": "./assets/images/AvocadoToast.png", "tags": ["eggs", "brunch"] },
         { "id": "breakfast_burrito", "name": "Breakfast Burrito", "price": 190, "image": "./assets/images/BreakfastBurrito.png", "tags": ["eggs", "brunch"] },
         { "id": "french_toast", "name": "French Toast", "price": 170, "image": "./assets/images/FrenchToast.png", "tags": ["sweet", "brunch", "classic"] },
         { "id": "eggs_benedict", "name": "Eggs Benedict", "price": 200, "image": "./assets/images/EggsBenedict.png", "tags": ["eggs", "brunch"] },
