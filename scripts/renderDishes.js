@@ -1,29 +1,58 @@
 import { addToCart } from "./cart.js";
 
-export function renderDishes(dishes) {
-  const dishList = document.getElementById("dishList");
-  if (!dishList || !Array.isArray(dishes)) return;
+async function loadAndRenderDishes() {
+  try {
+    const res = await fetch('./data/dishes.json');
+    const data = await res.json();
+    const container = document.getElementById('menu-container');
+    if (!container) return;
 
-  dishList.innerHTML = dishes.map((dish, i) => `
-    <section class="dish-card" data-index="${i}">
-      <img src="${dish.image}" alt="${dish.name}" loading="lazy" />
-      <div class="dish-info">
-        <h2>${dish.name}</h2>
-        <p class="price">₱${dish.price.toFixed(2)}</p>
-        <button class="order-btn" data-index="${i}">
-          🍽️ Add to Order
-        </button>
-      </div>
-    </section>
-  `).join("");
+    data.categories.forEach((category, catIndex) => {
+      // Create category section with background
+      const section = document.createElement('section');
+      section.className = `category-section ${category.background}`;
 
-  // Attach listeners AFTER rendering
-  const buttons = dishList.querySelectorAll(".order-btn");
-  buttons.forEach(btn => {
-    const index = parseInt(btn.dataset.index, 10);
-    btn.addEventListener("click", () => {
-      const dish = dishes[index];
-      if (dish) addToCart(dish);
+      // Category title
+      const title = document.createElement('h2');
+      title.textContent = category.name;
+      section.appendChild(title);
+
+      // Dish cards
+      category.items.forEach((dish, dishIndex) => {
+        const card = document.createElement('div');
+        card.className = 'dish-card';
+
+        card.innerHTML = `
+          <img src="${dish.image}" alt="${dish.name}" loading="lazy" />
+          <div class="dish-info">
+            <h3>${dish.name}</h3>
+            <p class="price">₱${dish.price.toFixed(2)}</p>
+            <button class="order-btn" data-cat="${catIndex}" data-index="${dishIndex}">
+              🍽️ Add to Order
+            </button>
+          </div>
+        `;
+
+        section.appendChild(card);
+      });
+
+      container.appendChild(section);
     });
-  });
+
+    // Attach cart listeners
+    const buttons = container.querySelectorAll(".order-btn");
+    buttons.forEach(btn => {
+      const cat = parseInt(btn.dataset.cat, 10);
+      const index = parseInt(btn.dataset.index, 10);
+      const dish = data.categories[cat]?.items[index];
+      if (dish) {
+        btn.addEventListener("click", () => addToCart(dish));
+      }
+    });
+
+  } catch (err) {
+    console.error("Failed to load dishes:", err);
+  }
 }
+
+loadAndRenderDishes();
