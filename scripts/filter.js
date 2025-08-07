@@ -1,4 +1,5 @@
-import { loadAndRenderDishes } from "./renderDishes.js";
+import { loadAndRenderDishes, renderDishes } from "./renderDishes.js";
+
 
 
 const tagFilters = document.getElementById("tagFilters");
@@ -34,7 +35,7 @@ function filterByTag(tag) {
   .then(data => {
     const dishes = data.categories.flatMap(cat => cat.items);
     const filtered = dishes.filter(d => d.tags.includes(tag));
-    loadAndRenderDishes(filtered);
+    renderDishes(filtered);
   });
 }
 
@@ -44,7 +45,7 @@ function loadDishes() {
   .then(data => {
     const dishes = data.categories.flatMap(cat => cat.items);
     renderTagFilters(dishes);
-    loadAndRenderDishes(dishes);
+    renderDishes(dishes);
   });
 }
 
