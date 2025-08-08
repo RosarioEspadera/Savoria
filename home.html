@@ -62,12 +62,10 @@
     },
     {
       name: "Breakfast Burrito",
-      description: "Crisp greens with citrus zest and sesame warmth.",
       photo: "assets/images/BreakfastBurrito.png"
     },
     {
       name: "Beignets",
-      description: "Smoky, tender cuts glazed in sweet fire.",
       photo: "assets/images/Beignets.png"
     }
   ];
@@ -80,7 +78,6 @@
     card.innerHTML = `
       <img src="${dish.photo}" alt="${dish.name}" />
       <h4>${dish.name}</h4>
-      <p>${dish.description}</p>
     `;
     grid.appendChild(card);
   });
