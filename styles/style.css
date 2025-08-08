@@ -32,3 +32,8 @@ body {
   background: #5f4638;
   color: white;
 }
+.size-6 {
+  width: 24px;
+  height: 24px;
+}
+
