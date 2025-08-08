@@ -118,19 +118,19 @@
 
 /* Coffee */
 .category-coffee {
-  background: linear-gradient(to right, #3c2a21, #b08968); /* gradient-coffee-sunset */
+  background: linear-gradient(to right, #d07b54, #f1d9c5); /* gradient-coffee-sunset */
   box-shadow: 0 0 10px rgba(60, 42, 33, 0.3);
 }
 
 /* Brunch */
 .category-breakfast {
-  background: linear-gradient(to right, #fcd5ce, #faedcd); /* gradient-morning-toast */
+  background: linear-gradient(to right, #d1d0b2, #faedcd); /* gradient-morning-toast */
   box-shadow: 0 0 10px rgba(252, 213, 206, 0.3);
 }
 
 /* Panini */
 .category-sandwiches {
-  background: linear-gradient(to right, #d4a373, #cdb5a7); /* gradient-panini-press */
+  background: linear-gradient(to right, #d09985, #cdb5a7); /* gradient-panini-press */
   box-shadow: 0 0 10px rgba(212, 163, 115, 0.3);
 }
 
@@ -142,7 +142,7 @@
 
 /* Sweet */
 .category-pastries {
-  background: linear-gradient(to right, #f8edeb, #fcd5ce); /* gradient-sugar-dream */
+  background: linear-gradient(to right, #c6dad1, #f6d6d0); /* gradient-sugar-dream */
   box-shadow: 0 0 10px rgba(248, 237, 235, 0.3);
 }
 .category-unknown {
