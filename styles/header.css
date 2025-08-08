@@ -21,7 +21,7 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  transition: background 0.3s ease;
+  transition: background 0.2s ease;
 }
 
 .top-nav a:hover {
@@ -61,9 +61,10 @@
    color: white;
    text-align: center;
    font-family: Times New Roman;
-   -webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) 2 alternate both;
-   animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) 2 alternate both;
+   -webkit-animation: flip-horizontal-bottom 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) 2 alternate both;
+   animation: flip-horizontal-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 2 alternate both;
  }
+
 @-webkit-keyframes flip-horizontal-bottom {
   0% {
     -webkit-transform: rotateX(0);
