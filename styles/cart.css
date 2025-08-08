@@ -121,9 +121,10 @@
 }
 
 #orderForm button {
-  background-color: #F77F00;
-  color: #ffffff;
-  border: none;
+  background-color: #a1b03d;
+  color: #fbf7f6;
+  border: nth-child;
+  border-color: #71af57;
   padding: 0.75rem;
   border-radius: 0.5rem;
   font-weight: 600;
@@ -132,7 +133,7 @@
 }
 
 #orderForm button:hover{
-  background-color:#faa580;
+  background-color:#d3f0a3;
   color: #293330;
 }
 
