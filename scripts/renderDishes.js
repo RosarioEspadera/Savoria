@@ -1,27 +1,11 @@
 import { addToCart } from "./cart.js";
 
-// Group dishes by category with background
-function groupDishesByCategory(dishes) {
-  const map = new Map();
-  dishes.forEach(dish => {
-    if (!map.has(dish.category)) {
-      map.set(dish.category, {
-        name: dish.category,
-        background: dish.background || '',
-        items: []
-      });
-    }
-    map.get(dish.category).items.push(dish);
-  });
-  return Array.from(map.values());
-}
-
 // Create a single dish card
-function createDishCard(dish, catIndex, dishIndex) {
+function createDishCard(dish, dishIndex) {
   const card = document.createElement('div');
   const categoryClass = dish.category
-  ? `category-${dish.category.toLowerCase().replace(/\s+/g, '-')}`
-  : 'category-unknown';
+    ? `category-${dish.category.toLowerCase().replace(/\s+/g, '-')}`
+    : 'category-unknown';
   card.classList.add("dish-card", categoryClass);
 
   card.innerHTML = `
@@ -29,7 +13,7 @@ function createDishCard(dish, catIndex, dishIndex) {
     <div class="dish-info">
       <h3>${dish.name}</h3>
       <p class="price">₱${dish.price.toFixed(2)}</p>
-      <button class="order-btn" data-cat="${catIndex}" data-index="${dishIndex}">
+      <button class="order-btn" data-index="${dishIndex}">
         🍽️ Add to Order
       </button>
     </div>
@@ -37,14 +21,12 @@ function createDishCard(dish, catIndex, dishIndex) {
   return card;
 }
 
-
 // Attach cart listeners
-function attachCartListeners(container, categories) {
+function attachCartListeners(container, dishes) {
   const buttons = container.querySelectorAll(".order-btn");
   buttons.forEach(btn => {
-    const cat = parseInt(btn.dataset.cat, 10);
     const index = parseInt(btn.dataset.index, 10);
-    const dish = categories[cat]?.items[index];
+    const dish = dishes[index];
     if (dish) {
       btn.addEventListener("click", () => addToCart(dish));
     }
@@ -58,22 +40,11 @@ export function renderDishes(dishes) {
   container.innerHTML = '';
 
   dishes.forEach((dish, index) => {
-  const card = createDishCard(dish, 0, index);
-  container.appendChild(card);
-    
-    const title = document.createElement('h2');
-    title.textContent = category.name;
-    section.appendChild(title);
-
-    category.items.forEach((dish, dishIndex) => {
-      const card = createDishCard(dish, catIndex, dishIndex);
-      section.appendChild(card);
-    });
-
-    container.appendChild(section);
+    const card = createDishCard(dish, index);
+    container.appendChild(card);
   });
 
-  attachCartListeners(container, categories);
+  attachCartListeners(container, dishes);
 }
 
 // Load JSON and render
