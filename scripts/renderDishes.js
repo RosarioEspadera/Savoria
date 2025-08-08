@@ -57,12 +57,10 @@ export function renderDishes(dishes) {
   if (!container) return;
   container.innerHTML = '';
 
-  const categories = groupDishesByCategory(dishes);
-
-  categories.forEach((category, catIndex) => {
-    const section = document.createElement('section');
-    section.className = `category-section ${category.background}`;
-
+  dishes.forEach((dish, index) => {
+  const card = createDishCard(dish, 0, index);
+  container.appendChild(card);
+    
     const title = document.createElement('h2');
     title.textContent = category.name;
     section.appendChild(title);
