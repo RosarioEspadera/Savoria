@@ -7,18 +7,45 @@ body {
   padding: 0;
 }
 
+.hero-header{
+  background: rgb(110 74 74 / 18%);
+}
 .site-header {
-  text-align: center;
-  padding: 1.5rem;
-  background: linear-gradient(to bottom, #e0b835, #ffffff);
-  border-bottom: 1px solid #e0d6cf;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 2;
 }
 
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #5c3d2e;
-  margin: 0;
+.top-nav {
+  display: flex;
+  gap: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.top-nav a {
+  color: #53321e;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.top-nav a:hover {
+  background: rgb(173 143 121 / 40%);
+}
+ header h1{
+   background: rgb(131 88 88 / 34%);
+   color: white;
+   text-align: center;
+   font-family: Times New Roman;
+ }
+
+.size-6 {
+  width: 24px;
+  height: 24px;
 }
 
 .profile-section {
@@ -81,29 +108,6 @@ body {
   background-color: #a84c3a;
 }
 
-.top-nav {
-  display: flex;
-  gap: 0.5rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.top-nav a {
-  color: #53321e;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.top-nav a:hover {
-  background: rgb(173 143 121 / 40%);
-}
-.size-6 {
-  width: 24px;
-  height: 24px;
-}
 .tab-link {
   text-align: center;
   font-size: 0.8rem;
