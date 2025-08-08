@@ -81,18 +81,29 @@ body {
   background-color: #a84c3a;
 }
 
-.bottom-tab {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  border-top: 1px solid #ddd;
+.top-nav {
   display: flex;
-  justify-content: space-around;
-  padding: 8px 0;
+  gap: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
+.top-nav a {
+  color: #53321e;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.top-nav a:hover {
+  background: rgb(173 143 121 / 40%);
+}
+.size-6 {
+  width: 24px;
+  height: 24px;
+}
 .tab-link {
   text-align: center;
   font-size: 0.8rem;
