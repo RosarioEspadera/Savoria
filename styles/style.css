@@ -7,7 +7,6 @@ body {
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(0.7px);
-  min-height: 100vh;
   color: #c0aa9a;
 }
 
