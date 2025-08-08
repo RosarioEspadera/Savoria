@@ -49,7 +49,7 @@ body {
 }
 
 .profile-section {
-  width: 100%;
+  width: --webkit-fill-available;
   height: auto;
   margin: 2rem auto;
   padding: 1rem;
