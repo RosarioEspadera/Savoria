@@ -3,8 +3,8 @@
   bottom: 1.5rem;
   right: 1.5rem;
   z-index: 1000;
-  background: linear-gradient(135deg, #3e2f2f, #7a5c5c); /* warm woodgrain-inspired gradient */
-  color: #fff;
+  background: linear-gradient(135deg, #4c7c82, #94bedf);
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.75rem 1.25rem;
@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: #faca71;
+  background-color: #c5af9f;
 }
 
 .cart-item {
@@ -121,7 +121,7 @@
 }
 
 #orderForm button {
-  background-color: #ffa666;
+  background-color: #d07b54;
   color: #ffffff;
   border: none;
   padding: 0.75rem;
@@ -132,8 +132,8 @@
 }
 
 #orderForm button:hover{
-  background-color:#FF9800;
-  color: #ffffff;
+  background-color:#f5d09b;
+  color: #584040;
 }
 
 .sidebar {
@@ -149,7 +149,7 @@
   overflow-y: auto;
   padding: 1.5rem;
   scroll-behavior: smooth;
-  background-color: #faca71;
+  background-color: #c5af9f;
 }
 
 .sidebar.open {
