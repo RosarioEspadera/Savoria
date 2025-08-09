@@ -47,8 +47,21 @@ button:hover {
   background-color: #7a5a45;
 }
 
-.error {
-  color: red;
-  margin-bottom: 12px;
-  text-align: center;
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.error-animate {
+  animation: shake 0.4s ease;
+}
+
+#errorMessage {
+  color: #e74c3c;
+  font-weight: 500;
+  padding-left: 8px;
+  margin: 5px;
 }
