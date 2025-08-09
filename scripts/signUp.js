@@ -1,7 +1,25 @@
 import { supabase } from "./supabase.js";
 
+function validatePasswords() {
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      const errorMessage = document.getElementById('errorMessage');
+
+      if (password !== confirmPassword) {
+        errorMessage.textContent = "Passwords do not match!";
+        errorMessage.classList.add("error-animate");
+        setTimeout(() => errorMessage.classList.remove("error-animate"), 400);
+        return false; // Prevent form submission
+      }
+
+      errorMessage.textContent = ""; // Clear error message
+      return true; // Allow form submission
+    }
+
 document.getElementById("signup-form").addEventListener("submit", async (e) => {
   e.preventDefault();
+  
+  if (!validatePasswords()) return;
 
   const name = document.getElementById("name").value;
   const age = parseInt(document.getElementById("age").value);
