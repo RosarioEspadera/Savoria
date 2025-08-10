@@ -39,4 +39,24 @@ body {
   width: 24px;
   height: 24px;
 }
+.about-us {
+  background-image: url('aboutus.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+.about-us h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-us p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
 
