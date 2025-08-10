@@ -40,7 +40,7 @@ body {
   height: 24px;
 }
 .about-us {
-  background-image: url('aboutus.png');
+  background-image: url('../aboutus.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
